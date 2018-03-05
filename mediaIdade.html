@@ -1,0 +1,43 @@
+﻿<meta charset="UTF-8">
+
+<script>
+	
+	function pulaLinha() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+	}
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	<!-- Declaração das Variáveis -->
+	
+	var parentes = parseInt(prompt("Digite seu número de parentes!!!"));
+	
+	var controle = 1;
+
+	var totalIdade = 0;
+
+	var medialIdade = 0;
+
+	<!-- Loop com While -->
+	
+	while(controle <= parentes){
+		var idade = parseInt(prompt("Digite a idade do seu parente!!!"));
+		
+		totalIdade = totalIdade + idade;
+		
+		medialIdade = totalIdade / parentes;
+		
+		controle++;
+	}
+	
+	mostra("A media de Idade de seus Parentes é: " + medialIdade);
+	
+	mostra("Fim do Cálculo!!!")
+
+</script>
