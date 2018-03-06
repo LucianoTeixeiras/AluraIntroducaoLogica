@@ -19,7 +19,7 @@
 
     function sorteio(){
 
-        Math.round(Math.random() * 10);
+        return Math.round(Math.random() * 10);
 
     }
 
@@ -33,18 +33,21 @@
             
             var numeroAleatorio = sorteio();
 
-            var achou = false;
+            if(numeroAleatorio !==0 ){
+                var achou = false;
 
-            for(var posicao = 0; posicao < segredos.length; posicao++){
-                if(segredos[posicao] == numeroAleatorio){
-                    achou = true;
-                    break;
+                for(var posicao = 0; posicao < segredos.length; posicao++){
+                    if(segredos[posicao] == numeroAleatorio){
+                        achou = true;
+                        break;
+                    
+                    }
                 }
-            }
 
-            if(achou==false){
-                segredos.push(numeroAleatorio);
-                contador++;
+                if(achou==false){
+                    segredos.push(numeroAleatorio);
+                    contador++;
+                }
             }
         }
 
